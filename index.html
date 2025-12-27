@@ -5,29 +5,37 @@
   <title>Unified Inbox for Sales</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Подключаем шрифт Glacial Indifference -->
+  <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference:wght@400;500;700&display=swap" rel="stylesheet">
+
   <style>
     * {
       box-sizing: border-box;
-      font-family: Inter, system-ui, -apple-system, sans-serif;
+      font-family: 'Glacial Indifference', sans-serif;
     }
 
     body {
       margin: 0;
       min-height: 100vh;
-      background: #f8fafc;
+      background: #f5f5f5;
       display: flex;
       align-items: center;
       justify-content: center;
-      color: #0f172a;
+      color: #000;
     }
 
     .card {
-      background: #ffffff;
+      background: #fff;
       padding: 40px;
       width: 100%;
       max-width: 440px;
       border-radius: 16px;
-      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+      text-align: center;
+    }
+
+    .logo {
+      max-width: 160px;
+      margin-bottom: 24px;
     }
 
     h1 {
@@ -35,20 +43,21 @@
       line-height: 1.2;
       margin: 0 0 12px 0;
       font-weight: 700;
+      color: #000;
     }
 
     h2 {
       font-size: 16px;
       font-weight: 500;
-      color: #475569;
       margin: 0 0 20px 0;
+      color: #000;
     }
 
     p {
       font-size: 15px;
       line-height: 1.6;
-      color: #334155;
       margin-bottom: 28px;
+      color: #000;
     }
 
     form {
@@ -61,12 +70,19 @@
       padding: 14px 16px;
       font-size: 14px;
       border-radius: 10px;
-      border: 1px solid #cbd5e1;
+      border: 1px solid #000;
+      color: #000;
+      background: #fff;
+    }
+
+    input::placeholder {
+      color: #000;
+      opacity: 0.6;
     }
 
     input:focus {
       outline: none;
-      border-color: #2563eb;
+      border-color: #000;
     }
 
     button {
@@ -77,24 +93,27 @@
       border-radius: 10px;
       border: none;
       cursor: pointer;
-      background: #2563eb;
-      color: white;
+      background: #000;
+      color: #fff;
     }
 
     button:hover {
-      background: #1d4ed8;
+      background: #333;
     }
 
     .meta {
       margin-top: 14px;
       font-size: 12px;
-      color: #64748b;
+      color: #000;
+      opacity: 0.7;
     }
   </style>
 </head>
 <body>
 
   <div class="card">
+    <img src="./public/logo-full.png" alt="UnifiedInbox Logo" class="logo">
+
     <h1>Unified inbox for all your sales DMs</h1>
     <h2>Instagram, Facebook — no more chaos</h2>
 
