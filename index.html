@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Unified Inbox for Sales</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <style>
+    * {
+      box-sizing: border-box;
+      font-family: Inter, system-ui, -apple-system, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #f8fafc;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #0f172a;
+    }
+
+    .card {
+      background: #ffffff;
+      padding: 40px;
+      width: 100%;
+      max-width: 440px;
+      border-radius: 16px;
+      box-shadow: 0 20px 40px rgba(15, 23, 42, 0.08);
+    }
+
+    h1 {
+      font-size: 32px;
+      line-height: 1.2;
+      margin: 0 0 12px 0;
+      font-weight: 700;
+    }
+
+    h2 {
+      font-size: 16px;
+      font-weight: 500;
+      color: #475569;
+      margin: 0 0 20px 0;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.6;
+      color: #334155;
+      margin-bottom: 28px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    input {
+      padding: 14px 16px;
+      font-size: 14px;
+      border-radius: 10px;
+      border: 1px solid #cbd5e1;
+    }
+
+    input:focus {
+      outline: none;
+      border-color: #2563eb;
+    }
+
+    button {
+      margin-top: 8px;
+      padding: 14px 20px;
+      font-size: 14px;
+      font-weight: 600;
+      border-radius: 10px;
+      border: none;
+      cursor: pointer;
+      background: #2563eb;
+      color: white;
+    }
+
+    button:hover {
+      background: #1d4ed8;
+    }
+
+    .meta {
+      margin-top: 14px;
+      font-size: 12px;
+      color: #64748b;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>Unified inbox for all your sales DMs</h1>
+    <h2>WhatsApp, Instagram, LinkedIn — no more chaos</h2>
+
+    <p>
+      Track every lead conversation, see new messages instantly
+      and never lose deal context again.
+    </p>
+
+    <form action="https://formspree.io/f/mlgejqgl" method="POST">
+      <input
+        type="text"
+        name="name"
+        placeholder="Your name"
+        required
+      />
+
+      <input
+        type="email"
+        name="email"
+        placeholder="Your email"
+        required
+      />
+
+      <button type="submit">Join waitlist</button>
+    </form>
+
+    <div class="meta">
+      Early access • Built for founders & sales teams
+    </div>
+  </div>
+
+</body>
+</html>
