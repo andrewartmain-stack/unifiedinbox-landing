@@ -2,14 +2,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Unified Inbox for Sales</title>
+  <title>Simple CRM for Freelancers – Unified Inbox</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-   <!-- Favicon -->
   <link rel="icon" type="image/png" href="./images/favicon.png" />
   <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
 
-  <!-- Подключаем шрифт Glacial Indifference -->
   <link href="https://fonts.googleapis.com/css2?family=Glacial+Indifference:wght@400;500;700&display=swap" rel="stylesheet">
 
   <style>
@@ -30,38 +28,78 @@
 
     .card {
       background: #fff;
-      padding: 40px;
+      padding: 44px;
       width: 100%;
-      max-width: 440px;
-      border-radius: 16px;
-      text-align: center;
+      max-width: 540px;
+      border-radius: 18px;
+      position: relative;
     }
 
     .logo {
-      max-width: 160px;
-      margin-bottom: 24px;
+      max-width: 150px;
+      margin-bottom: 26px;
+      display: block;
     }
 
     h1 {
-      font-size: 32px;
+      font-size: 34px;
       line-height: 1.2;
-      margin: 0 0 12px 0;
+      margin: 0 0 10px 0;
       font-weight: 700;
-      color: #000;
     }
 
     h2 {
-      font-size: 16px;
+      font-size: 17px;
       font-weight: 500;
-      margin: 0 0 20px 0;
-      color: #000;
+      margin: 0 0 22px 0;
+      opacity: 0.85;
     }
 
-    p {
+    .description {
       font-size: 15px;
       line-height: 1.6;
-      margin-bottom: 28px;
-      color: #000;
+      margin-bottom: 26px;
+      opacity: 0.95;
+    }
+
+    .description strong {
+      font-weight: 700;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px 22px;
+      margin-bottom: 32px;
+    }
+
+    .feature {
+      font-size: 14px;
+    }
+
+    .feature strong {
+      font-weight: 700;
+    }
+
+    /* Arrow pointing to form */
+    .arrow {
+      position: absolute;
+      right: -28px;
+      top: 58%;
+      font-size: 32px;
+      font-weight: 700;
+    }
+
+    .form-box {
+      border-radius: 16px;
+      padding: 22px;
+      position: relative;
+    }
+
+    .form-title {
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 12px;
     }
 
     form {
@@ -75,25 +113,17 @@
       font-size: 14px;
       border-radius: 10px;
       border: 1px solid #000;
-      color: #000;
-      background: #fff;
-    }
-
-    input::placeholder {
-      color: #000;
-      opacity: 0.6;
     }
 
     input:focus {
       outline: none;
-      border-color: #000;
     }
 
     button {
-      margin-top: 8px;
+      margin-top: 6px;
       padding: 14px 20px;
       font-size: 14px;
-      font-weight: 600;
+      font-weight: 700;
       border-radius: 10px;
       border: none;
       cursor: pointer;
@@ -105,11 +135,54 @@
       background: #333;
     }
 
-    .meta {
-      margin-top: 14px;
+    .form-note {
+      margin-top: 8px;
       font-size: 12px;
-      color: #000;
       opacity: 0.7;
+    }
+
+    .social-proof {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .avatars {
+      display: flex;
+    }
+
+    .avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: #000;
+      color: #fff;
+      font-size: 13px;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: -8px;
+      border: 2px solid #fff;
+      overflow: hidden;
+    }
+
+    .social-text {
+      font-size: 14px;
+      font-weight: 700;
+    }
+
+    .meta {
+      margin-top: 10px;
+      font-size: 12px;
+      opacity: 0.65;
+    }
+
+    @media (max-width: 480px) {
+      .features {
+        grid-template-columns: 1fr;
+      }
     }
   </style>
 </head>
@@ -118,34 +191,58 @@
   <div class="card">
     <img src="./images/logo-full.png" alt="UnifiedInbox Logo" class="logo">
 
-    <h1>Unified inbox for all your sales DMs</h1>
-    <h2>Instagram, Facebook — no more chaos</h2>
+    <h1>Get paid without chasing clients</h1>
+    <h2>A lightweight CRM made for freelancers</h2>
 
-    <p>
-      Track every lead conversation, see new messages instantly
-      and never lose deal context again.
+    <p class="description">
+      Keep your <strong>clients, projects, and follow-ups</strong> in one place.
+      Send emails to leads and <strong>payment reminders</strong> without awkward messages or extra tools.
     </p>
 
-    <form action="https://formspree.io/f/mlgejqgl" method="POST">
-      <input
-        type="text"
-        name="name"
-        placeholder="Your name"
-        required
-      />
+    <div class="features">
+      <div class="feature">• <strong>Track clients & deals</strong></div>
+      <div class="feature">• <strong>See who owes you money</strong></div>
+      <div class="feature">• Send emails to your leads</div>
+      <div class="feature">• Follow up with multiple clients</div>
+    </div>
 
-      <input
-        type="email"
-        name="email"
-        placeholder="Your email"
-        required
-      />
+    <div class="form-box">
+      <div class="form-title">Get early access</div>
 
-      <button type="submit">Join waitlist</button>
-    </form>
+      <form action="https://formspree.io/f/mlgejqgl" method="POST">
+        <input type="text" name="name" placeholder="Your name" required />
+        <input type="email" name="email" placeholder="Your email" required />
+        <button type="submit">Join the waitlist</button>
+      </form>
+
+      <div class="form-note">
+        No spam. <strong>1 email when we launch.</strong>
+      </div>
+    </div>
+
+    <div class="social-proof">
+      <div class="avatars">
+        <div class="avatar">
+          <img src="./images/1621523155517.jpg" style="width: 100%;" alt="avatar">
+        </div>
+        <div class="avatar">
+          <img src="./images/1649322541827.jpg" style="width: 100%;" alt="avatar">
+        </div>
+        <div class="avatar">
+          <img src="./images/1704672310136.jpg" style="width: 100%;" alt="avatar">
+        </div>
+        <div class="avatar">
+          <img src="./images/1758620746782.jpg" style="width: 100%;" alt="avatar">
+        </div>
+        <div class="avatar">+</div>
+      </div>
+      <div class="social-text">
+        100+ freelancers already joined
+      </div>
+    </div>
 
     <div class="meta">
-      Early access • Built for founders & sales teams
+      Early access • Built for independent freelancers
     </div>
   </div>
 
